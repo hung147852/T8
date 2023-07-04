@@ -114,6 +114,7 @@ namespace T8
 			foreach (KeyValuePair<string, Employee> kvp in employees)
 			{
 				Employee emp = kvp.Value;
+				Console.WriteLine($"{kvp.Value}");
 				if (emp.GetNo().Equals(searchKey) || emp.GetName().Equals(searchKey))
 				{
 					result.Add(emp);
@@ -165,6 +166,7 @@ namespace T8
 
                         Employee employee = new Employee(empNo, empName, empEmail, empPassword, empIsManager);
                         AddEmployee(employee);
+                        Console.WriteLine("Import1!");
                     }
                 }
 
@@ -295,6 +297,7 @@ namespace T8
 						ExportList();
 						break;
 					case 6:
+						//Console.WriteLine("ABC");
 						Importdata();
 						break;
 					case 7:
@@ -304,7 +307,7 @@ namespace T8
 						Console.WriteLine("Invalid");
 						break;
 				}
-			} while (selected != 6);
+			} while (selected != 7);
 		}
 
 		public void UserEmployee()
